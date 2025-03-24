@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return ( 
-    <nav className="bg-gray-900 text-gray-200 p-5 shadow-lg">
+    <nav className="bg-gray-900 text-gray-200 p-12 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-semibold tracking-wide text-white">
           My Ecommerce
