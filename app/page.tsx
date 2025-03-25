@@ -11,19 +11,23 @@ export default async function Home() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-900 to-gray-900 text-white">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-b from-blue-900 to-gray-900">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-16">
           {/* Text Content */}
-          <div className="md:w-1/2 space-y-6">
+          <div className="md:w-1/2 space-y-6 text-center md:text-left">
             <h2 className="text-5xl font-extrabold leading-tight">
               Elevate Your Shopping Experience
             </h2>
             <p className="text-lg text-gray-300">
               Discover the latest trends and unbeatable prices.
             </p>
-            <Button asChild variant="default" className="bg-blue-500 hover:bg-blue-600 text-lg px-8 py-4 rounded-xl shadow-md">
+            <Button 
+              asChild 
+              variant="default" 
+              className="bg-blue-500 hover:bg-blue-600 text-lg px-8 py-4 rounded-xl shadow-md"
+            >
               <Link href="/products">Shop Now</Link>
             </Button>
           </div>
@@ -41,11 +45,11 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Carousel Section */}
+      {/* Trending Now Section */}
       <section className="py-16 bg-gray-800">
         <div className="container mx-auto px-6 md:px-16">
-          <h3 className="text-3xl font-semibold text-center mb-6">Trending Now</h3>
-          <Carousel products={products.data}/>
+          <h3 className="text-3xl font-semibold text-center mb-6">🔥 Trending Now</h3>
+          <Carousel products={products.data} />
         </div>
       </section>
     </div>
