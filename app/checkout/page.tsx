@@ -1,6 +1,8 @@
 "use client";
+
 import { useCartStore } from "@/store/cart-store";
 import Image from "next/image";
+import { checkoutAction } from "./checkout-action";
 
 export default function Checkout() {
   const { items, addItem, removeItem, clearCart } = useCartStore();
@@ -82,6 +84,17 @@ export default function Checkout() {
       >
         Clear Cart
       </button>
+
+      <form action={checkoutAction}>
+          <input type="hidden" name="items" value={JSON.stringify(items)}/>
+          <button
+            type="submit"
+            className="w-full py-3 mt-6 text-lg font-bold text-white transition bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+          >
+            Proceed to Checkout
+          </button>
+      </form>
+
     </div>
   );
 }
